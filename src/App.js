@@ -1,25 +1,34 @@
 import React from 'react';
 import './App.css';
+import About from './components/About';
+import Experiences from './components/Experiences';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1>Ashley<br />Liu</h1>
-        <nav>
-          <a href="#home">Home</a>
-          <a href="#projects">Projects</a>
-          <a href="#experiences">Experiences</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-      <main>
-        <div className="welcome">
-          Welcome
-        </div>
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <header>
+          <h1>Ashley<br />Liu</h1>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/experiences">Experiences</Link>
+            <Link to="/about">About</Link>
+            <a href="mailto:awl77@cornell.edu">Contact</a>
+          </nav>
+        </header>
+
+        <Routes>
+          <Route path="/about" element={<About />} />
+          {/* Add other routes like Home, Projects, etc. */}
+          <Route path="/experiences" element={<Experiences />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </Router >
   );
 }
 

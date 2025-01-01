@@ -1,0 +1,93 @@
+.experiences-container {
+  /* background: url('../path-to-canvas-image.jpg'); */
+  /* Replace with your canvas image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  text-align: center;
+}
+
+.experiences-container h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 70%;
+  /* Reduced width for the boxes */
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  width: 60px;
+  /* Increased size of the circle */
+  height: 60px;
+  background-color: lightgray;
+  /* Light grey for circles */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.timeline-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background: rgba(200, 200, 200, 0.8);
+  /* Lighter grey box */
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 0;
+}
+
+.timeline-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content span {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Line between circles */
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 29px;
+  /* Aligns with the center of the circles */
+  width: 6px;
+  height: 100%;
+  background: #ccc;
+  /* Light grey line */
+  z-index: 0;
+}

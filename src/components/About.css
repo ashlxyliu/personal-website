@@ -1,0 +1,34 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: left;
+  /* background: url('../path-to-your-canvas-image.jpg'); */
+  /* Replace with your canvas image */
+  background-size: cover;
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1rem;
+  /* Smaller text */
+  font-weight: bold;
+  /* Bold text */
+  line-height: 1.6;
+  /* Adjust line spacing for readability */
+  text-transform: uppercase;
+  /* Keep text in uppercase */
+}
